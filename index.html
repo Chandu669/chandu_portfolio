@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Chandu Nadeepa - Fullstack Software Engineer</title>
+    <meta name="title" content="Chandu Nadeepa - Fullstack Software Engineer">
+    <meta name="description"
+        content="Fullstack Software Engineer with 4 years of experience in web and backend development. Specializing in React, TypeScript, Node.js, and MongoDB.">
+    <meta name="keywords"
+        content="Fullstack Developer, Software Engineer, React, TypeScript, Node.js, MongoDB, Web Development">
+    <meta name="author" content="Chandu Nadeepa">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>CN</text></svg>">
+    <link rel="icon" type="image/png"
+        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAF0WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4yLWMwMDAgNzkuMWI2NWE3OWI0LCAyMDIyLzA2LzEzLTIyOjAxOjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlRXZlbnQjIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgMjQuMCAoTWFjaW50b3NoKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjQtMDItMTVUMTU6NDc6NDctMDU6MDAiIHhtcDpNZXRhZGF0YURhdGU9IjIwMjQtMDItMTVUMTU6NDc6NDctMDU6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDI0LTAyLTE1VDE1OjQ3OjQ3LTA1OjAwIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjY5ZDM4ZjM5LTY5ZDAtNDI0ZC1hMzM5LTY5ZDM4ZjM5IiB4bXBNTTpEb2N1bWVudElEPSJhZG9iZTpkb2NpZDpwaG90b3Nob3A6NjlkMzhmMzktNjlkMC00MjRkLWEzMzktNjlkMzhmMzkiIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo2OWQzOGYzOS02OWQwLTQyNGQtYTMzOS02OWQzOGYzOSIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJjcmVhdGVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjY5ZDM4ZjM5LTY5ZDAtNDI0ZC1hMzM5LTY5ZDM4ZjM5IiBzdEV2dDp3aGVuPSIyMDI0LTAyLTE1VDE1OjQ3OjQ3LTA1OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjQuMCAoTWFjaW50b3NoKSIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4B//79/Pv6+fj39vX08/Lx8O/u7ezr6uno5+bl5OPi4eDf3t3c29rZ2NfW1dTT0tHQz87NzMvKycjHxsXEw8LBwL++vby7urm4t7a1tLOysbCvrq2sq6qpqKempaSjoqGgn56dnJuamZiXlpWUk5KRkI+OjYyLiomIh4aFhIOCgYB/fn18e3p5eHd2dXRzcnFwb25tbGtqaWhnZmVkY2JhYF9eXVxbWllYV1ZVVFNSUVBPTk1MS0pJSEdGRURDQkFAPz49PDs6OTg3NjU0MzIxMC8uLSwrKikoJyYlJCMiISAfHh0cGxoZGBcWFRQTEhEQDw4NDAsKCQgHBgUEAwIBAAAh+QQBAAAAACwAAAAAAwADAAACBZQjmIAFADs=">
+    <link rel="apple-touch-icon"
+        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAF0WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4yLWMwMDAgNzkuMWI2NWE3OWI0LCAyMDIyLzA2LzEzLTIyOjAxOjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlRXZlbnQjIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgMjQuMCAoTWFjaW50b3NoKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjQtMDItMTVUMTU6NDc6NDctMDU6MDAiIHhtcDpNZXRhZGF0YURhdGU9IjIwMjQtMDItMTVUMTU6NDc6NDctMDU6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDI0LTAyLTE1VDE1OjQ3OjQ3LTA1OjAwIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjY5ZDM4ZjM5LTY5ZDAtNDI0ZC1hMzM5LTY5ZDM4ZjM5IiB4bXBNTTpEb2N1bWVudElEPSJhZG9iZTpkb2NpZDpwaG90b3Nob3A6NjlkMzhmMzktNjlkMC00MjRkLWEzMzktNjlkMzhmMzkiIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo2OWQzOGYzOS02OWQwLTQyNGQtYTMzOS02OWQzOGYzOSIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJjcmVhdGVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjY5ZDM4ZjM5LTY5ZDAtNDI0ZC1hMzM5LTY5ZDM4ZjM5IiBzdEV2dDp3aGVuPSIyMDI0LTAyLTE1VDE1OjQ3OjQ3LTA1OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjQuMCAoTWFjaW50b3NoKSIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4B//79/Pv6+fj39vX08/Lx8O/u7ezr6uno5+bl5OPi4eDf3t3c29rZ2NfW1dTT0tHQz87NzMvKycjHxsXEw8LBwL++vby7urm4t7a1tLOysbCvrq2sq6qpqKempaSjoqGgn56dnJuamZiXlpWUk5KRkI+OjYyLiomIh4aFhIOCgYB/fn18e3p5eHd2dXRzcnFwb25tbGtqaWhnZmVkY2JhYF9eXVxbWllYV1ZVVFNSUVBPTk1MS0pJSEdGRURDQkFAPz49PDs6OTg3NjU0MzIxMC8uLSwrKikoJyYlJCMiISAfHh0cGxoZGBcWFRQTEhEQDw4NDAsKCQgHBgUEAwIBAAAh+QQBAAAAACwAAAAAAwADAAACBZQjmIAFADs=">
+    <meta name="theme-color" content="#1a1a2e">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <img src="images/logo.png" alt="Chandu Nadeepa Logo" class="logo-img">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="profile-image">
+                <img src="images/profile.jpg" alt="Chandu Nadeepa" class="profile-img">
+                <div class="profile-overlay"></div>
+            </div>
+            <h1>Hi, I'm <span class="highlight">Chandu Nadeepa</span></h1>
+            <h2>Fullstack Software Engineer</h2>
+            <p>Building innovative solutions with modern technologies</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn primary">Contact Me</a>
+                <a href="#projects" class="btn secondary">View Projects</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrow">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>A determined and hardworking individual with 4 years of experience in full-stack software
+                        engineering, specializing in web and backend development. Passionate about creating innovative
+                        solutions and enhancing user experiences, I am seeking opportunities in the field of software
+                        engineering to leverage my skills and expertise. My goal is to continuously learn and grow,
+                        ultimately becoming an expert in the industry.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-container">
+                <div class="skills-category">
+                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3><i class="fas fa-laptop-code"></i> Frontend Development</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3><i class="fas fa-server"></i> Backend Development</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-fire"></i>
+                            <span>Firebase</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3><i class="fas fa-tools"></i> Tools & Others</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-bitbucket"></i>
+                            <span>BitBucket</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Responsive Design</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-universal-access"></i>
+                            <span>Accessibility</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-timeline">
+                <div class="education-item">
+                    <div class="year">2022 - 2023</div>
+                    <div class="content">
+                        <h3>B.SC. (HONS) COMPUTER SCIENCE AND SOFTWARE ENGINEERING (TOP-UP)</h3>
+                        <p>UNIVERSITY OF BEDFORDSHIRE</p>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <div class="year">2019 - 2021</div>
+                    <div class="content">
+                        <h3>GDSE - GRADUATE DIPLOMA IN SOFTWARE ENGINEERING</h3>
+                        <p>INSTITUTE OF JAVA AND SOFTWARE ENGINEERING</p>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <div class="year">2015 - 2017</div>
+                    <div class="content">
+                        <h3>KALUTARA VIDYALAYA, KALUTARA</h3>
+                        <p>MATHS STREAM : SSS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <!-- Company Projects -->
+                <div class="project-category">
+                    <h3>Company Projects</h3>
+                    <div class="project-items">
+                        <div class="project-card">
+                            <h4>LAVNI PROJECT</h4>
+                            <p>Led the development of a web application that helps users find mental health services
+                                covered by their insurance and connect with licensed therapists. Managed the project for
+                                the last five months as a team lead and contributed to its development over the past two
+                                years.</p>
+                            <div class="tech-stack">
+                                <span>React</span>
+                                <span>TypeScript</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                                <span>Twilio</span>
+                                <span>Stripe</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <h4>PENSIL MY DEAL</h4>
+                            <p>Managed and developed a web application project full-time. Utilized React and TypeScript
+                                for the front end, Node.js for the backend, and MongoDB for the database.</p>
+                            <div class="tech-stack">
+                                <span>React</span>
+                                <span>TypeScript</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <h4>GROUPDOC</h4>
+                            <p>Contributed to the development of a small-scale web project using WordPress.</p>
+                            <div class="tech-stack">
+                                <span>WordPress</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <h4>MOVE BUTLER</h4>
+                            <p>Developed a Real Estate Managing Web Application that allows real estate companies to
+                                manage their businesses and customers. Focused on developing the frontend and data
+                                integration, while also contributing to backend updates.</p>
+                            <div class="tech-stack">
+                                <span>React</span>
+                                <span>TypeScript</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <h4>XP GROWTH</h4>
+                            <p>Developed an Employee Management System for companies, which manages employees and
+                                provides an internal chat option for employees.</p>
+                            <div class="tech-stack">
+                                <span>React</span>
+                                <span>TypeScript</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <h4>FAN BUDGET POS APP WEB/ADMIN</h4>
+                            <p>Led the development of a cloud-based Mobile POS system using Flutter and Node.js for
+                                cross-platform functionality. Built and managed the Admin Panel in React (TypeScript)
+                                and oversaw web/desktop integration using Tauri.</p>
+                            <div class="tech-stack">
+                                <span>Flutter</span>
+                                <span>React</span>
+                                <span>TypeScript</span>
+                                <span>Node.js</span>
+                                <span>Tauri</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <h4>BILLA CLOUD MERCHANT APPLICATION</h4>
+                            <p>Developed a fully completed POS (Point of Sale) system utilizing React.js (Class
+                                Component Base) for the front end.</p>
+                            <div class="tech-stack">
+                                <span>React.js</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <h4>BILLA CLOUD ECOMMERCE APPLICATION</h4>
+                            <p>Developed a fully completed ECommerce system using React.js (Class Component Base) for
+                                the front end.</p>
+                            <div class="tech-stack">
+                                <span>React.js</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <h4>BILLA CLOUD WEBSITE</h4>
+                            <p>Contributed to UI development by creating various user interface pages.</p>
+                            <div class="tech-stack">
+                                <span>React.js</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personal Projects -->
+                <div class="project-category">
+                    <h3>Personal Projects</h3>
+                    <div class="project-items">
+                        <div class="project-card">
+                            <h4>INNA THANAK</h4>
+                            <p>Developed a web application designed to assist students of the University of Sri
+                                Jayewardenepura, Sri Lanka, in finding their ideal living, working, and learning spaces.
+                            </p>
+                            <div class="tech-stack">
+                                <span>Web Development</span>
+                            </div>
+                            <a href="https://innathenak.com/" target="_blank" class="project-link">Visit Website</a>
+                        </div>
+
+                        <div class="project-card">
+                            <h4>MAHI BEACH HOTEL</h4>
+                            <p>Developed a website for Mahi Beach Restaurant using Bootstrap.</p>
+                            <div class="tech-stack">
+                                <span>Bootstrap</span>
+                            </div>
+                            <a href="https://mahibeach.com/" target="_blank" class="project-link">Visit Website</a>
+                        </div>
+
+                        <div class="project-card">
+                            <h4>SCIENCE CENTER STUDENT MANAGEMENT SYSTEM</h4>
+                            <p>Developed a student management system specifically for science centers using React.js.
+                            </p>
+                            <div class="tech-stack">
+                                <span>React.js</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <h4>VATHNARA SAREES</h4>
+                            <p>Developed a freelance E-Commerce Application for Vathnara, an online shop, to manage the
+                                online store and stocks.</p>
+                            <div class="tech-stack">
+                                <span>E-Commerce</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interests Section -->
+    <section id="interests" class="interests">
+        <div class="container">
+            <h2 class="section-title">Interests & Hobbies</h2>
+            <div class="interests-grid">
+                <div class="interest-item">
+                    <i class="fas fa-film"></i>
+                    <h3>Watching Movies</h3>
+                </div>
+                <div class="interest-item">
+                    <i class="fas fa-music"></i>
+                    <h3>Music</h3>
+                </div>
+                <div class="interest-item">
+                    <i class="fas fa-baseball-ball"></i>
+                    <h3>Playing Cricket</h3>
+                </div>
+                <div class="interest-item">
+                    <i class="fas fa-book"></i>
+                    <h3>Reading</h3>
+                </div>
+                <div class="interest-item">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Learning New Technologies</h3>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+94776694735</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>chandunadeepa0@gmail.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>450, Madombe, Kosgoda, Sri Lanka</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/chandu-nadeepa-3413761a7/" target="_blank">LinkedIn
+                            Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Chandu Nadeepa. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
